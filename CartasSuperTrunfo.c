@@ -98,6 +98,53 @@ printf ( " a densidade populacional cidade2 é: %.2f hab/km²\n", densidade2);
  printf (" o pib per capita cidade1 é: %.2f\n", pib_per_capita);
  printf (" o pib per capita cidade2 é: %.2f\n", pib_per_capita2);
   
-  return 0;
+ // emplementação do super poder que é a soma da população, área, PIB, pib per capita 
+ //e densidade populacional invertida para comparação e número de pontos turisticos
+
+ float superpoder1, superpoder2;
+ float densidade_invertida = area1 / populacao;
+ superpoder1=(float)populacao + area1 + pib1 + pib_per_capita + densidade_invertida + (float)pontosturisticos;
+ superpoder2= (float) populacao2 + area2+ pib2+ pib_per_capita2 + densidade_invertida + (float) pontosturisticos2;
+
+ printf(" o superpoder é: %.2f\n", superpoder1);
+ printf (" o superpoder é: %.2f\n",superpoder2);
+ 
+ // comparações 
+   float comparacao; 
+   comparacao= populacao > populacao2;
+   comparacao= pib_per_capita > pib_per_capita2;
+   comparacao= pontosturisticos > pontosturisticos2;
+   comparacao= populacao2 < populacao;
+  comparacao= pib_per_capita2 < pib_per_capita;
+   comparacao= pontosturisticos2 < pontosturisticos;
+   comparacao= densidade1 > densidade2;
+   comparacao= densidade2 < densidade1;
+   comparacao= densidade1 == densidade2;
+   comparacao= populacao == populacao2;
+   comparacao= pib_per_capita2 == pib_per_capita;
+   comparacao= pontosturisticos == pontosturisticos2;
+   comparacao= superpoder1 == superpoder2;
+   comparacao= superpoder2 > superpoder1;
+   comparacao= superpoder1 < superpoder2;
+
+   // lendo os codigos
+
+ printf("populacao > populacao2: %f\n", comparacao);
+ printf("pib_per_capita > pib_per_capita2: %f\n", comparacao);
+ printf("pontosturisticos > pontosturisticos2: %f\n", comparacao);
+ printf("populacao2 < populacao: %f\n", comparacao);
+ printf("pib_per_capita2 < pib_per_capita: %f\n", comparacao);
+ printf("pontosturisticos2 < pontosturisticos: %f\n", comparacao);
+ printf("densidade1 > densidade2: %f\n", comparacao);
+ printf("densidade2 < densidade1: %f\n", comparacao);
+ printf("densidade1 == densidade2: %f\n", comparacao);
+ printf("populacao == populacao2: %f\n", comparacao);
+ printf("pib_per_capita2 == pib_per_capita: %f\n", comparacao);
+ printf("pontosturisticos == pontosturisticos2: %f\n", comparacao);
+ printf("superpoder1 == superpoder2: %f\n", comparacao);
+ printf("superpoder2 > superpoder1: %f\n", comparacao);
+ printf("superpoder1 < superpoder2: %f\n", comparacao);
+
+ return 0;
 
   }
