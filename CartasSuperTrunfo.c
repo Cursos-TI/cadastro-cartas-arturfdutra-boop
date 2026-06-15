@@ -32,13 +32,13 @@ scanf ("%f", &pib1);
 
 // imprimir os dados
 
-printf (" o estado e: %c", estado);
-printf (" o codigo e: %s", codigo);
-printf (" a cidade e: %s", cidade1);
-printf (" a populacao e:%d", populacao);
-printf (" a area e: %f km²", area1);
-printf (" os pontos turisticos e: %d", pontosturisticos);
-printf (" o pib e: %f bilhões", pib1);
+printf (" o estado e: %c\n", estado);
+printf (" o codigo e: %s\n", codigo);
+printf (" a cidade e: %s\n", cidade1);
+printf (" a populacao e:%d\n", populacao);
+printf (" a area e: %f km²\n", area1);
+printf (" os pontos turisticos e: %d\n", pontosturisticos);
+printf (" o pib e: %f bilhões\n", pib1);
 
 char estado2;
 char codigo2 [4];
@@ -67,18 +67,19 @@ scanf ( "%f", &area2);
 
 printf("digite os pontos turisticos: \n");
 scanf ( "%d", &pontosturisticos2);
+
 printf ( "digite o pib em bilhões: \n");
 scanf ( "%f", &pib2);
 
 // imprimir os dados
 
-printf (" o estado e: %c", estado2);
-printf (" o codigo e: %s", codigo2);
-printf (" a cidade e: %s", cidade2);
-printf (" a populacao e: %d", populacao2);
-printf (" a area e: %f km²", area2);
-printf (" os pontos turisticos e: %d", pontosturisticos2);
-printf (" o pib e: %f bilhões", pib2);
+printf (" o estado e: %c\n", estado2);
+printf (" o codigo e: %s\n", codigo2);
+printf (" a cidade e: %s\n", cidade2);
+printf (" a populacao e: %d\n", populacao2);
+printf (" a area e: %f km²\n", area2);
+printf (" os pontos turisticos e: %d\n", pontosturisticos2);
+printf (" o pib e: %f bilhões\n", pib2);
 
 // calculo de densidade populacional e pib per capita
 
@@ -110,41 +111,35 @@ printf ( " a densidade populacional cidade2 é: %.2f hab/km²\n", densidade2);
  printf (" o superpoder é: %.2f\n",superpoder2);
  
  // comparações 
-   float comparacao; 
-   comparacao= populacao > populacao2;
-   comparacao= pib_per_capita > pib_per_capita2;
-   comparacao= pontosturisticos > pontosturisticos2;
-   comparacao= populacao2 < populacao;
-  comparacao= pib_per_capita2 < pib_per_capita;
-   comparacao= pontosturisticos2 < pontosturisticos;
-   comparacao= densidade1 > densidade2;
-   comparacao= densidade2 < densidade1;
-   comparacao= densidade1 == densidade2;
-   comparacao= populacao == populacao2;
-   comparacao= pib_per_capita2 == pib_per_capita;
-   comparacao= pontosturisticos == pontosturisticos2;
-   comparacao= superpoder1 == superpoder2;
-   comparacao= superpoder2 > superpoder1;
-   comparacao= superpoder1 < superpoder2;
+  
+ int comp_populacao;
+ int comp_pib;
+ int comp_pontos;
+ int comp_densidade;
+ int comp_superpoder; 
+
+comp_populacao = populacao > populacao2;
+comp_pib = pib_per_capita > pib_per_capita2;
+comp_pontos = pontosturisticos > pontosturisticos2;
+comp_densidade = densidade1 > densidade2;
+comp_superpoder = superpoder2 > superpoder1;
+
 
    // lendo os codigos
 
- printf("populacao > populacao2: %f\n", comparacao);
- printf("pib_per_capita > pib_per_capita2: %f\n", comparacao);
- printf("pontosturisticos > pontosturisticos2: %f\n", comparacao);
- printf("populacao2 < populacao: %f\n", comparacao);
- printf("pib_per_capita2 < pib_per_capita: %f\n", comparacao);
- printf("pontosturisticos2 < pontosturisticos: %f\n", comparacao);
- printf("densidade1 > densidade2: %f\n", comparacao);
- printf("densidade2 < densidade1: %f\n", comparacao);
- printf("densidade1 == densidade2: %f\n", comparacao);
- printf("populacao == populacao2: %f\n", comparacao);
- printf("pib_per_capita2 == pib_per_capita: %f\n", comparacao);
- printf("pontosturisticos == pontosturisticos2: %f\n", comparacao);
- printf("superpoder1 == superpoder2: %f\n", comparacao);
- printf("superpoder2 > superpoder1: %f\n", comparacao);
- printf("superpoder1 < superpoder2: %f\n", comparacao);
+ printf ("populacao > populacao2: %d\n", comp_populacao);
+ printf ( "pib_per_capita > pib_per_capita2: %d\n", comp_pib);
+ printf("pontosturisticos > pontosturisticos2: %d\n", comp_pontos);
+ printf("densidade1 > densidade2: %d\n", comp_densidade);
+ printf("superpoder2 > superpoder1: %d\n", comp_superpoder);
+ 
+ if (populacao > populacao2) {
+  printf("populacao venceu!.\n");
 
+ }else{
+  printf("populacao2 venceu!.\n");
+ 
+}
  return 0;
 
   }
