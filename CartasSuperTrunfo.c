@@ -140,6 +140,66 @@ comp_superpoder = superpoder2 > superpoder1;
   printf("populacao2 venceu!.\n");
  
 }
- return 0;
+ // menu interativo
+int opcao, regras;
 
+
+
+printf ("menu principal\n");
+printf ("1. inciar o jogo\n");
+printf (" 2. ver regras\n");
+printf (" 3.fechar o jogo\n");
+scanf ("%d", &opcao);
+switch (opcao) {
+  case 1:
+  printf ("digite a populacao:\n");
+  scanf ("%d", &populacao);
+  printf ("digite a populacao2:\n");
+  scanf ("%d", &populacao2);
+
+  if ( populacao > populacao2) {
+ printf (" populacao ganhou!\n");
+  } else if (populacao2 > populacao) {
+    printf ("populacao2 ganhou!\n");
+  } else {
+    printf (" empatou!\n");
   }
+ printf ("digite os pontosturisticos:\n");
+ scanf ("%d", &pontosturisticos);
+ printf (" digite os pontosturisticos2:\n");
+ scanf ("%d", &pontosturisticos2);
+ if ( pontosturisticos > pontosturisticos2) {
+  printf ("pontosturisticos ganhou!\n");
+ } else if (pontosturisticos2 > pontosturisticos) {
+  printf ("pontosturisticos2 ganhou!\n");
+ } else {
+  printf ("empatou!\n");
+ }
+ 
+  break;
+ 
+ case 2:
+printf ("explicando as regras\n");
+printf (" digite a regra que você quer saber\n");
+scanf ("%d", &regras);
+switch (regras) {
+  case 1:
+  printf (" regra 1: vence o maior numero\n");
+  break;
+  case 2:
+  printf ("regra 2: se  o numero for igual então é considerado empate\n");
+  break;
+default:
+printf ("regra inexistente\n");
+}
+break;
+
+  case 3: 
+ printf (" fechar o jogo\n");
+ break;
+
+default:
+printf ("Opção inválida, tente mais tarde\n");
+}
+ return 0; 
+}
