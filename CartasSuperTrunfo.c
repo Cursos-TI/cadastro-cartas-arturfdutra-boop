@@ -201,5 +201,102 @@ break;
 default:
 printf ("Opção inválida, tente mais tarde\n");
 }
- return 0; 
+
+ int resultado1, resultado2;
+char primeiroatributo, segundoatributo;
+ int ataque1,ataque2, defesa1, defesa2, recuo1, recuo2;
+ ataque1= populacao;
+ ataque2= populacao2;
+ defesa1= area1;
+ defesa2= area2;
+ recuo1= pib1;
+ recuo2= pib2;
+ 
+
+ //inicio do jogo
+
+ printf ("seja bem-vindo ao jogo!\n");
+ printf ("escolha o primeiro atributo\n");
+ printf ("A.ataque\n");
+ printf ("D.defesa\n");
+ printf ("R.recuo\n");
+
+ printf ("escolha a comparação: ");
+ scanf ("%c",&primeiroatributo);
+
+ switch (primeiroatributo) 
+ {
+case 'A':
+case 'a':
+printf ("você escolheu a opção ataque!\n");
+resultado1= populacao > populacao2 ? 1 : 0;
+break;
+
+case 'D':
+case 'd':
+printf ("você escolheu a opção defesa!\n");
+resultado1= area1 > area2 ? 1 : 0;
+break;
+
+case 'R':
+case 'r':
+printf ("você escolheu a opção recuo!\n");
+resultado1= pib1 > pib2 ? 1 : 0;
+ break;
+  
+ default:
+ printf ("opção inválida!\n");
+ break;
+
 }
+
+printf ("escolha o segundo atributo\n");
+printf ("atenção: você deve escolher um  atributo diferente do primeiro!\n");
+printf ("A.ataque\n");
+printf ("D.defesa\n");
+printf ("R.recuo\n");
+
+printf ("escolha a comparação:");
+scanf ("%c", &segundoatributo);
+
+if (primeiroatributo==segundoatributo) {
+  printf ("você escolheu o mesmo atributo\n");
+} else {
+  switch (segundoatributo) {
+  case 'A':
+  case 'a':
+  printf ("você escolheu a opção ataque!\n");
+  resultado2= populacao > populacao2 ? 1 : 0;
+  break;
+
+  case 'D':
+  case 'd':
+  printf ("você escolheu a opção defesa!\n");
+  resultado2= area1 > area2 ? 1 : 0;
+  break;
+
+  case 'R':
+  case 'r':
+  printf ("você escolheu a opção recuo!\n");
+  resultado2= pib1 > pib2 ? 1 : 0;
+  break;
+ 
+  default:
+ printf ("opção inválida!\n");
+ break;
+}
+if (resultado1 && resultado2) {
+  printf ("parabens, você ganhou!\n");
+} else if (resultado1 != resultado2 ) {
+printf ("empatou!\n");
+} else {
+  printf ("infelizmente, você perdeu!\n");
+}
+
+printf ("as duas cidades são: %s e %s\n", cidade1, cidade2);
+
+return 0;
+}
+}
+
+
